@@ -74,7 +74,7 @@ const HitchingToGoHashtags =
         "glampinglife",
         "glampers",
         "ontheroadagain",
-        "retirementtravel" 
+        "retirementtravel",
         "retirementgoals",
         "retirementlife",
         "retirementlifestyle",
