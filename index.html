@@ -1,9 +1,21 @@
 <html>
-    <script src="scripts/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="text/javascript" src="resources/HitchingToGo.js"></script>
+    <script type="text/javascript" src="resources/MomoIsDog.js"></script>
     <head>
         <title>Momo's Instagram Hashtag Generator</title>
     </head>
     <body>
+        <br>
+        <div>
+            <input type="radio" id="Momo" name="insta" value="Momo" checked>
+            <label for="Momo">Momo</label>
+        </div>
+        <div>
+            <input type="radio" id="HitchingToGo" name="insta" value="HitchingToGo">
+            <label for="HitchingToGo">Hitching To Go</label>
+        </div>
+        <br>
         <div>
             <button onclick="generateHashtags()">Generate</button>
         </div>

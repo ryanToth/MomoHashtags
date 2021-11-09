@@ -1,101 +1,25 @@
-var numberOfHashtags = 27;
+import { MomoIsDogHashtags } from '../resources/MomoIsDog.js'
+import { HitchingToGoHashtags } from '../resources/HitchingToGo.js'
 
-var requiredHashtags = [
-    "momoisdog"
-]
-
-var optionalHashtags = [
-    "shichon",
-    "shichonsofinstagram",
-    "shichonpuppy",
-    "shichonlife",
-    "shichonstagram",
-    "shichonlove",
-    "shichonlovers",
-    "shichonofinstagram",
-    "shichons",
-    "shichonpuppies",
-    "shichonoftheday",
-    "puppytraining",
-    "puppylovers",
-    "puppyfun",
-    "puppypic",
-    "puppypower",
-    "puppyplay",
-    "puppytime",
-    "puppymodel",
-    "puppyproblems",
-    "puppycuddles",
-    "puppykisses",
-    "puppydaily",
-    "puppypics",
-    "puppysnuggles",
-    "puppyadventures",
-    "puppyschool",
-    "petgrooming",
-    "petcare",
-    "petgram",
-    "petmodel",
-    "sleepypuppy",
-    "weeklyfluff",
-    "dogsofinstagram",
-    "pupoftheday",
-    "tinypaws",
-    "tinypuppy",
-    "babydoggy",
-    "tinypup",
-    "cutepup",
-    "dogsofseattle",
-    "floof",
-    "floofy",
-    "floofydog",
-    "fluffball",
-    "floppyears",
-    "doggydog",
-    "dogsarebetterthanhumans",
-    "whitedogsofinstagram",
-    "cutedogsdaily",
-    "momo",
-    "spotteddog",
-    "waggingtail",
-    "littlepup",
-    "littlepuppy",
-    "fluffydogs",
-    "fluffydogsofinstagram",
-    "zuchon",
-    "zuchonsofinstagram",
-    "teddybear",
-    "teddybearpuppy",
-    "zuchonpuppy",
-    "furbabiesofinstagram",
-    "gamerdog",
-    "dailypuppy",
-    "furbabies",
-    "furryfriend",
-    "seattledog",
-    "seattledogs",
-    "PNWpup",
-    "pnwpups",
-    "dogsofpnw",
-    "pnwdog",
-    "pnwdogslife",
-    "featurethatdoggo",
-    "dogsthatgram",
-    "dogbloggers",
-    "dogmoments",
-]
+const numberOfHashtags = 27;
 
 var prevHashtags = [];
 
 function generateHashtags() {
+    var hashtagsToUse = MomoIsDogHashtags
+    if (document.getElementById("HitchingToGo").checked)
+    {
+        hashtagsToUse = HitchingToGoHashtags;
+    }
+
     var hashtags = [];
-    requiredHashtags.forEach(element => {
+    hashtagsToUse.required.forEach(element => {
         hashtags.push(element);
     });
 
     while (hashtags.length < numberOfHashtags) {
-        var hashtagIndex = Math.floor(Math.random() * optionalHashtags.length);
-        var hashtag = optionalHashtags[hashtagIndex];
+        var hashtagIndex = Math.floor(Math.random() * hashtagsToUse.optional.length);
+        var hashtag = hashtagsToUse.optional[hashtagIndex];
         if (!hashtags.includes(hashtag) && !prevHashtags.includes(hashtag)) {
             hashtags.push(hashtag);
         }
