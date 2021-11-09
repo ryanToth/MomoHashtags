@@ -1,6 +1,3 @@
-import { MomoIsDogHashtags } from '../resources/MomoIsDog.js'
-import { HitchingToGoHashtags } from '../resources/HitchingToGo.js'
-
 const numberOfHashtags = 27;
 
 var prevHashtags = [];

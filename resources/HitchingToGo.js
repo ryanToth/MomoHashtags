@@ -1,4 +1,4 @@
-export const HitchingToGoHashtags =
+const HitchingToGoHashtags =
 {
     "required": [
         "hitchingtogo"

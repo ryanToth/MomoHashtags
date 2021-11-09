@@ -1,4 +1,4 @@
-export const MomoIsDogHashtags =
+const MomoIsDogHashtags =
 {
     "required": [
         "momoisdog"
